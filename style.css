@@ -1,0 +1,466 @@
+/* تنظیمات کلی صفحه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #070A12;
+    color: #F1F5F9;
+    font-family: Tahoma, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+/* عنوان اصلی  */
+h1 {
+    font-size: 42px;
+    color: #60A5FA;
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 25px #2563EB80;
+}
+
+/* متن زیر عنوان  */
+p{
+    color: #CBD5E1;
+    font-size: 17px;
+    line-height: 2;
+}
+/* کادر تولد ایلین */
+.birthday-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 30px;
+
+    background: rgba(30, 41, 59, 0.35);
+    border: 1px solid #3B82F6;
+    border-radius: 24px;
+
+    box-shadow: 
+        0 0 30px #2563eb20
+        inset 0 0 25PX #EF444410;
+
+        backdrop-filter: blur(12px);
+}
+
+/* قلب بالای عنوان  */
+.heart {
+    display: block;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+/* عنوان داخل کارت */
+.birthday-card h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+/* خط تزینی */
+.divider {
+    width: 90px;
+    height: 3px;
+    margin: 25px auto;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        to right,
+        #3B82F6,
+        #EF4444
+    );
+}
+/* پیام تولد  */
+.message {
+    font-size: 16px;
+    line-height: 2.2;
+}
+
+/* موزیک پلیر */
+.music-player {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid#334155;
+    border-radius: 18px;
+}
+
+.music-title {
+    color: #93C5FD;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.music-player audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* بخش خاطرات */
+.memories {
+    width: 100%;
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    padding: 25px 15px;
+}
+
+.memories h2 {
+    color: #60A5FA;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.gallery-subtitle {
+    color: #94A3B8;
+    margin-bottom: 35px;
+}
+
+/* چیدمان عکس‌ها */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* کارت هر عکس */
+.photo-card {
+    padding: 12px;
+    background: #111827;
+    border: 1px solid #26364D;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.photo-card p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* افکت حرکت با ماوس */
+.photo-card:hover {
+    transform: translateY(-6px);
+    border-color: #3B82F6;
+    box-shadow: 0 8px 25px #2563EB25;
+}
+
+/* نمایش بهتر در گوشی */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .memories h2 {
+        font-size: 23px;
+    }
+
+    .photo-card img {
+        height: 240px;
+    }
+}
+
+/* نامه تولد */
+.birthday-letter {
+    width: 100%;
+    max-width: 750px;
+    margin: 40px auto 80px;
+    padding: 35px 28px;
+
+    background: linear-gradient(
+        145deg,
+        #111827,
+        #0B1120
+    );
+
+    border: 1px solid #334155;
+    border-right: 3px solid #3B82F6;
+    border-radius: 20px;
+
+    text-align: right;
+    line-height: 2.2;
+}
+
+.letter-icon {
+    display: block;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.birthday-letter h2 {
+    color: #60A5FA;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.birthday-letter p {
+    margin-bottom: 16px;
+    color: #CBD5E1;
+    font-size: 15px;
+}
+
+.birthday-letter .final-wish {
+    color: #F87171;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.birthday-letter .signature {
+    color: #93C5FD;
+    text-align: left;
+    margin-top: 25px;
+}
+
+/* چیدمان دو ستونه‌ی بخش اصلی */
+.hero-layout {
+    width: 100%;
+    max-width: 1200px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    align-items: stretch;
+    direction: ltr;
+}
+
+/* کارت‌ها در چیدمان جدید */
+.hero-layout .birthday-card,
+.personality-card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    direction: rtl;
+}
+
+/* کارت خصوصیات */
+.personality-card {
+    padding: 35px 28px;
+    background: linear-gradient(145deg, #111827, #080D18);
+    border: 1px solid #263F61;
+    border-left: 3px solid #EF4444;
+    border-radius: 24px;
+    box-shadow: 0 0 30px #2563EB12;
+}
+
+.personality-icon {
+    font-size: 38px;
+}
+
+.personality-card h2 {
+    color: #60A5FA;
+    font-size: 25px;
+    margin: 15px 0 10px;
+}
+
+.personality-intro {
+    margin-bottom: 25px;
+    color: #94A3B8;
+}
+
+.trait {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 15px 0;
+    border-bottom: 1px solid #1E293B;
+}
+
+.trait > span {
+    font-size: 23px;
+}
+
+.trait h3 {
+    color: #E2E8F0;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.trait p {
+    color: #94A3B8;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.personality-card .special-note {
+    color: #F87171;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 22px;
+    line-height: 2;
+}
+
+/* نمایش در گوشی و صفحه‌های باریک */
+@media (max-width: 800px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .hero-layout .birthday-card,
+    .personality-card {
+        padding: 28px 20px;
+    }
+}
+
+/* بخش پیام مخفی */
+.secret-section {
+    width: calc(100% - 30px);
+    max-width: 750px;
+    margin: 40px auto 80px;
+    padding: 35px 25px;
+
+    text-align: center;
+    background: linear-gradient(145deg, #111827, #080D18);
+    border: 1px solid #334155;
+    border-radius: 24px;
+}
+
+.secret-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.secret-section h2 {
+    color: #60A5FA;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.secret-section > p {
+    color: #94A3B8;
+    margin-bottom: 25px;
+}
+
+#secret-button {
+    padding: 13px 24px;
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+#secret-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 25px #3B82F655;
+}
+
+.secret-message {
+    margin-top: 28px;
+    padding: 24px;
+    text-align: right;
+    line-height: 2.2;
+
+    background: #0B1220;
+    border: 1px solid #3B82F6;
+    border-radius: 16px;
+
+    animation: reveal 0.6s ease;
+}
+
+.secret-message h3 {
+    color: #93C5FD;
+    margin-bottom: 15px;
+}
+
+.secret-message p {
+    color: #CBD5E1;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* آسمون پرستاره آیلین */
+.starry-sky {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.starry-sky .stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, #ffffff 1px, transparent 2px),
+        radial-gradient(circle, #60a5fa 1px, transparent 2px),
+        radial-gradient(circle, #bfdbfe 2px, transparent 3px);
+    background-size: 90px 90px, 140px 140px, 210px 210px;
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+.starry-sky .shooting-star {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffffff);
+    transform: rotate(-35deg);
+    animation: shooting-star 5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+@keyframes shooting-star {
+    0%, 70% {
+        opacity: 0;
+        translate: 0 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        translate: -200px 130px;
+    }
+}

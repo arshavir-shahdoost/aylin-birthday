@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <main class="hero-layout">
+
+    <section class="birthday-card">
+
+        <span class="heart">💙</span>
+
+        <h1>تولدت مبارک آیلین!</h1>
+
+        <p class="subtitle">
+           برای دوست دوست‌داشتنی ترین موجود دنیا...
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="message">
+            بعضی آدم‌ها با حضورشون دنیا رو قشنگ‌تر می‌کنن؛
+            تو یکی از همون آدم‌هایی، آیلین!
+        </p>
+
+        <div class="music-player">
+            <p class="music-title">🎧 آهنگ مخصوص تو</p>
+
+            <audio controls>
+                <source src="music/./maneskin_-_trastevere.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+    </section>
+
+    <aside class="personality-card">
+
+        <span class="personality-icon">🦋</span>
+
+        <h2>آیلین از نگاه من</h2>
+
+        <p class="personality-intro">
+            یه آدم خاص با یه قلب قشنگ...
+        </p>
+
+        <div class="trait">
+            <span>💙</span>
+            <div>
+                <h3>خوش‌قلب و مهربون</h3>
+                <p>مهربونی‌ای که واقعاً از ته دلشه.</p>
+            </div>
+        </div>
+
+        <div class="trait">
+            <span>🔥</span>
+            <div>
+                <h3>شیطون و یه‌کم تند</h3>
+                <p>همیشه در حال خرابکاری کردن با موهاش</p>
+            </div>
+        </div>
+
+        <div class="trait">
+            <span>😌</span>
+            <div>
+                <h3>رک و بی تعارف</h3>
+                <p>مستقیم تخریب میکنه هرکسیو که دوست نداشته باشه رک ترینه</p>
+                </div>
+        </div>
+
+        <div class="trait">
+            <span>❤️</span>
+            <div>
+                <h3>حساس و دوست‌داشتنی</h3>
+                <p>پشت اون ظاهر شوخ، احساسات قشنگی داره.</p>
+            </div>
+        </div>
+
+        <p class="special-note">
+            خاص‌ترین ویژگی تو؟ قلب مهربونته، فلفل خانوم.
+        </p>
+
+    </aside>
+
+</main>
+    <section class="memories">
+
+    <h2>قاب‌هایی از عکس های زیبات 💙</h2>
+
+    <p class="gallery-subtitle">
+        سه قاب، هزار تا خاطره...
+    </p>
+
+    <div class="gallery">
+
+        <div class="photo-card">
+            <img src="./img/memory1.jpg.jpg" alt="زیبای خنده هات">
+            <p>یه لبخند قشنگ ✨</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="./img/memory2.jpg.jpg" alt="موهای نازت">
+        <p> موهای قرمزت 💙</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="./img/memory3.jpg.jpg" alt="موهای نازت">
+            <p> موهای فرفریت❤️</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="birthday-letter">
+
+    <span class="letter-icon">💌</span>
+
+    <h2>چند کلمه برای تو، آیلین...</h2>
+
+    <p>
+        آیلین، تولدت مبارک! 💙
+    </p>
+
+    <p>
+        می‌دونی چی تو رو خاص می‌کنه؟
+        اون قلب مهربونیه که پشت اون همه شیطنت و رک‌گویی قایم کردی!
+        شاید همیشه نگم، ولی خوشحالم که توی زندگی‌م هستی.
+    </p>
+
+    <p>
+        امیدوارم سال جدید زندگیت پر از خنده‌های واقعی،
+        اتفاق‌های قشنگ و رسیدن به آرزوهایی باشه که توی دلت داری.
+    </p>
+
+    <p class="final-wish">
+        همیشه همون آیلین خاص خودت بمون. ❤️
+    </p>
+
+    <p class="signature">
+        طرف اسپایدرمن💙
+    </p>
+
+</section>
+<section class="secret-section">
+
+    <div class="secret-icon">🔐</div>
+
+    <h2>یه چیز دیگه هم هست، آیلین...</h2>
+
+    <p>این پیام فقط برای توئه!</p>
+
+    <button id="secret-button" onclick="revealMessage()">
+        باز کردن پیام مخفی 💌
+    </button>
+
+    <div id="secret-message" class="secret-message hidden">
+        <h3> فلفل دوست داشتنی</h3>
+
+        <p>
+            شاید نتونم همیشه همه‌ی حرف‌هام رو بگم،
+            ولی خوشحالم که تو رو دارم.
+            امیدوارم امسال برات پر از اتفاق‌های خوب،
+            خنده‌های از ته دل و آرزوهای برآورده‌شده باشه.
+        </p>
+
+        <p>
+           تولدت مبارک مهم ترینم... ❤️
+        </p>
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+<div class="starry-sky" aria-hidden="true">
+    <div class="stars stars-small"></div>
+    <div class="stars stars-medium"></div>
+    <div class="stars stars-big"></div>
+
+    <span class="shooting-star"></span>
+    <span class="shooting-star shooting-star-two"></span>
+</div>
+</body>
+</html>
